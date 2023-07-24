@@ -1,7 +1,6 @@
+<?php ?>
 <!DOCTYPE html>
-<html lang="en">
-<!--begin::Head-->
-
+<html lang="es">
 <head>
   <base href="">
   <title>MEDIC</title>
@@ -17,9 +16,7 @@
   <link href="./views/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body id="kt_body"
-  class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed"
-  style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
+<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed aside-enabled aside-fixed">
   <!--begin::Root-->
   <div class="d-flex flex-column flex-root">
     <!--begin::Page-->
@@ -36,25 +33,21 @@
         <!--begin::Content-->
         <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
           <!-- CONTENIDO -->
-          <!--begin::Toolbar-->
-          <div class="toolbar" id="kt_toolbar">
-            <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
-              <div data-kt-swapper="true" data-kt-swapper-mode="prepend"
-                data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
-                class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
-                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Dashboard
-                  <span class="h-20px border-gray-200 border-start ms-3 mx-2"></span>
-                  <small class="text-muted fs-7 fw-bold my-1 ms-1">#XRS-45670</small>
-                </h1>
-              </div>
-            </div>
-          </div>
-          <!--end::Toolbar-->
           <!--begin::Post-->
           <div class="post d-flex flex-column-fluid" id="kt_post">
             <!--begin::Container-->
             <div id="kt_content_container" class="container-xxl">
-              <?php include_once './views/tableList.php'; ?>
+              <?php
+              if(isset($_GET['page']) && $_GET['page'] != ''){
+                if(file_exists('./views/'.$_GET['page'].'.php')){
+                  include_once './views/'.$_GET['page'].'.php';
+                }else{
+                  include_once './views/error.php';
+                }
+              }else{
+                include_once './views/tablePacientes.php';
+              }?>
+              <?php //include_once './views/table.php';?>
             </div>
             <!--end::Container-->
           </div>
@@ -77,8 +70,9 @@
 
 
   <script src="./views/assets/plugins/custom/datatables/datatables.bundle.js"></script>
-  <script src="./views/assets/js/custom/apps/customers/list/export.js"></script>
-  <script src="./views/assets/js/custom/apps/customers/list/list.js"></script>
+  <!-- <script src="./views/assets/js/custom/apps/customers/list/export.js"></script> -->
+  <!-- <script src="./views/assets/js/custom/apps/customers/list/list.js"></script> -->
+  <script src="./views/assets/js/custom/apps/customers/list/listar.js"></script>
   <script src="./views/assets/js/custom/apps/customers/add.js"></script>
   
 
@@ -86,6 +80,14 @@
   <script src="./views/assets/js/custom/apps/chat/chat.js"></script>
   <script src="./views/assets/js/custom/modals/create-app.js"></script>
   <script src="./views/assets/js/custom/modals/upgrade-plan.js"></script>
+  <!-- <script>
+    const tabla = new DataTable('#example');
+    // identificador del inpur en este caso es un attr aria-controls="example"
+    document.querySelector('[aria-controls="example"]').addEventListener('keyup', function (e) {
+      tabla.search(e.target.value).draw();
+    })  
+    
+  </script> -->
 </body>
 
 </html>

@@ -391,7 +391,7 @@
           <!--end::Company=-->
           <!--begin::Payment method=-->
           <td data-filter="american_express">
-            <img src="assets/media/svg/card-logos/american-express.svg" class="w-35px me-3" alt="" />**** 1867
+            <img src="./views/assets/media/svg/card-logos/american-express.svg" class="w-35px me-3" alt="" />**** 1867
           </td>
           <!--end::Payment method=-->
           <!--begin::Date=-->
@@ -577,7 +577,7 @@
           <!--end::Company=-->
           <!--begin::Payment method=-->
           <td data-filter="mastercard">
-            <img src="assets/media/svg/card-logos/mastercard.svg" class="w-35px me-3" alt="" />**** 7725
+            <img src="./views/assets/media/svg/card-logos/mastercard.svg" class="w-35px me-3" alt="" />**** 7725
           </td>
           <!--end::Payment method=-->
           <!--begin::Date=-->

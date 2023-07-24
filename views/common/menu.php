@@ -39,7 +39,7 @@
         id="#kt_aside_menu" data-kt-menu="true">
         <div class="menu-item">
           <div class="menu-content pb-2">
-            <span class="menu-section text-muted text-uppercase fs-8 ls-1">PACIENTES</span>
+            <span class="menu-section text-muted text-uppercase fs-8 ls-1">ACCIONES</span>
           </div>
         </div>
         <div class="menu-item">
@@ -54,7 +54,7 @@
                 </svg>
               </span>
             </span>
-            <span class="menu-title">Lista de Pacientes</span>
+            <span class="menu-title">Pacientes</span>
           </a>
         </div>
         <div class="menu-item">
@@ -91,7 +91,7 @@
               </span>
               <!--end::Svg Icon-->
             </span>
-            <span class="menu-title">Only Header</span>
+            <span class="menu-title">Citas</span>
           </a>
         </div>
         <div class="menu-item">
@@ -185,9 +185,8 @@
         </div>
 
         <div class="menu-item">
-          <a class="menu-link" href="../../demo1/dist/documentation/getting-started/changelog.html">
+          <a class="menu-link" href="#">
             <span class="menu-icon">
-              <!--begin::Svg Icon | path: icons/duotune/coding/cod003.svg-->
               <span class="svg-icon svg-icon-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path
@@ -198,9 +197,8 @@
                     fill="black" />
                 </svg>
               </span>
-              <!--end::Svg Icon-->
             </span>
-            <span class="menu-title">Changelog v8.0.25</span>
+            <span class="menu-title">Usuarios (Medicos)</span>
           </a>
         </div>
       </div>
@@ -211,10 +209,10 @@
   <!--end::Aside menu-->
   <!--begin::Footer-->
   <div class="aside-footer flex-column-auto pt-5 pb-7 px-5" id="kt_aside_footer">
-    <a href="../../demo1/dist/documentation/getting-started.html" class="btn btn-custom btn-primary w-100"
+    <a href="#" class="btn btn-custom btn-primary w-100"
       data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click"
-      title="200+ in-house components and 3rd-party plugins">
-      <span class="btn-label">Docs &amp; Components</span>
+      title="Terminar la sesión actual">
+      <span class="btn-label">Cerrar Sesión</span>
       <!--begin::Svg Icon | path: icons/duotune/general/gen005.svg-->
       <span class="svg-icon btn-icon svg-icon-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
