@@ -4,37 +4,34 @@
 
 <head>
   <base href="">
-  <title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular &amp; Laravel
-    by Keenthemes</title>
+  <title>MEDIC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
-  <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+  <link rel="shortcut icon" href="./views/assets/media/logos/favicon.ico" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
-  <link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+  <link href="./views/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
 
-  <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-  <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-  <!--end::Global Stylesheets Bundle-->
+  <link href="./views/assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+
+  <link href="./views/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+  <link href="./views/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 </head>
-<!--end::Head-->
-<!--begin::Body-->
 
 <body id="kt_body"
   class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed"
   style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
-  <!--begin::Main-->
   <!--begin::Root-->
   <div class="d-flex flex-column flex-root">
     <!--begin::Page-->
     <div class="page d-flex flex-row flex-column-fluid">
       <!--begin::Aside-->
-      <?php include_once './common/menu.php';?>
+      <?php include_once './views/common/menu.php'; ?>
       <!--end::Aside-->
 
       <!--begin::Wrapper-->
       <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
         <!--begin::Header-->
-        <?php include_once './common/header.php';?>
+        <?php include_once './views/common/header.php'; ?>
         <!--end::Header-->
         <!--begin::Content-->
         <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
@@ -57,7 +54,7 @@
           <div class="post d-flex flex-column-fluid" id="kt_post">
             <!--begin::Container-->
             <div id="kt_content_container" class="container-xxl">
-              
+              <?php include_once './views/tableList.php'; ?>
             </div>
             <!--end::Container-->
           </div>
@@ -65,7 +62,7 @@
         </div>
         <!--end::Content-->
         <!--begin::Footer-->
-        <?php include_once './common/footer.php';?>
+        <?php include_once './views/common/footer.php'; ?>
         <!--end::Footer-->
       </div>
       <!--end::Wrapper-->
@@ -74,14 +71,21 @@
   </div>
   <!--end::Root-->
 
-  <script>var hostUrl = "assets/";</script>
-  <script src="assets/plugins/global/plugins.bundle.js"></script>
-  <script src="assets/js/scripts.bundle.js"></script>
-  <script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
-  <script src="assets/js/custom/widgets.js"></script>
-  <script src="assets/js/custom/apps/chat/chat.js"></script>
-  <script src="assets/js/custom/modals/create-app.js"></script>
-  <script src="assets/js/custom/modals/upgrade-plan.js"></script>
+  <script>var hostUrl = "./views/assets/";</script>
+  <script src="./views/assets/plugins/global/plugins.bundle.js"></script>
+  <script src="./views/assets/js/scripts.bundle.js"></script>
+
+
+  <script src="./views/assets/plugins/custom/datatables/datatables.bundle.js"></script>
+  <script src="./views/assets/js/custom/apps/customers/list/export.js"></script>
+  <script src="./views/assets/js/custom/apps/customers/list/list.js"></script>
+  <script src="./views/assets/js/custom/apps/customers/add.js"></script>
+  
+
+  <script src="./views/assets/js/custom/widgets.js"></script>
+  <script src="./views/assets/js/custom/apps/chat/chat.js"></script>
+  <script src="./views/assets/js/custom/modals/create-app.js"></script>
+  <script src="./views/assets/js/custom/modals/upgrade-plan.js"></script>
 </body>
 
 </html>
