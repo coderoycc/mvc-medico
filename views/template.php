@@ -38,15 +38,18 @@
             <!--begin::Container-->
             <div id="kt_content_container" class="container-xxl">
               <?php
+              include_once './controllers/template.controller.php';
+              $template = new TemplateController();
               if(isset($_GET['page']) && $_GET['page'] != ''){
-                if(file_exists('./views/'.$_GET['page'].'.php')){
-                  include_once './views/'.$_GET['page'].'.php';
-                }else{
-                  include_once './views/error.php';
-                }
+                $page = $_GET['page'];
+                $template -> renderViewContent($page);
               }else{
                 include_once './views/tablePacientes.php';
-              }?>
+              }
+              // include_once './views/tablePacientes.php';
+              // echo '<br>';
+              // echo isset($_GET['page']) ? $_GET['page'] : 'No hay pagina';
+              ?>
               <?php //include_once './views/table.php';?>
             </div>
             <!--end::Container-->
