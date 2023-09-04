@@ -1,10 +1,9 @@
-FROM php:8.0-apache
-COPY . /var/www/html
+FROM php:8.1-apache
+RUN apt-get update && apt-get install -y \
+    unixodbc-dev
+RUN pecl install pdo_sqlsrv sqlsrv
 
-ENV DB_HOST sqlserver-express
-ENV DB_PORT 1433
-ENV DB_DATABASE my_database
-ENV DB_USERNAME usuario
-ENV DB_PASS pass123
-
-EXPOSE 80
+RUN docker-php-ext-enable pdo_sqlsrv sqlsrv
+ENV DB_PASS royberT0908
+COPY . /var/www/html/
+RUN a2enmod rewrite 
