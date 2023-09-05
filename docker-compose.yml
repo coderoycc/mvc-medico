@@ -8,4 +8,19 @@ services:
       ACCEPT_EULA: Y
     ports:
       - "1433:1433"
-    
+    networks:
+      - api_net
+  
+  apache:
+    build: 
+      context: ./
+    container_name: apache
+    ports:
+      - "80:80"
+    networks:
+      - api_net
+    volumes:
+      - C:\Users\Usuario\proyectosPHP\app-mvc:/var/www/html/
+
+networks:
+  api_net:

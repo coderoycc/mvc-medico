@@ -1,15 +1,16 @@
 <?php 
-echo "HOLAmmmmmmmmXDmm	";
+echo "Ahora<hr>";
+// phpinfo();
 try {
-	$serverName = 'localhost';
-	$databaseName = 'master';
-	$userName = 'sa';
-	$pass = 'royberT0908*';
-	$conn = new PDO("sqlsrv:Server=$serverName;Database=$databaseName", $userName, $pass);
+	$serverName = "sqlserver";
+	$databaseName = "dbapi";
+	$userName = "sa";
+	$pass = "royberT0908*";
+	$conn = new PDO("sqlsrv:server=$serverName;database=$databaseName;Encrypt=0;TrustServerCertificate=1", $userName, $pass);
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	return true;
 } catch (PDOException $e) {
 	echo 'Error en la conexion: '.$e->getMessage();
+	print_r($e);
 }
 
 // consulta
