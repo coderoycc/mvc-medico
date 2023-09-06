@@ -15,11 +15,12 @@ try {
 
 // consulta
 $sql = "SELECT 1 + 1 as result";
-$result = $conn->query($sql);
-if($result){
-	echo "consulta ok";
-	print_r($result);
-}else{
-	echo $conn->errorInfo()[2];
-}
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+
+$res = $stmt->fetchAll(PDO::FETCH_ASSOC);  
+echo count($res);
+echo "<br>consulta ok";
+print_r($res);
+
 ?>

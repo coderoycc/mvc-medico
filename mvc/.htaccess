@@ -1,0 +1,8 @@
+Options -Indexes
+RewriteEngine On
+RewriteBase /mvc/public/
+
+# Redirigir todas las solicitudes al archivo index.php, excepto para archivos y directorios existentes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php [QSA,L]
