@@ -20,7 +20,7 @@ services:
     networks:
       - api_net
     volumes:
-      - C:\Users\Usuario\proyectosPHP\app-mvc:/var/www/html/
+      - C:\Users\Usuario\proyectosPHP\app-mvc\mvc:/var/www/html/
 
 networks:
   api_net:

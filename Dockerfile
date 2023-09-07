@@ -17,4 +17,4 @@ RUN docker-php-ext-enable pdo_sqlsrv sqlsrv
 
 RUN a2enmod rewrite
 
-COPY . /var/www/html/
+COPY ./mvc /var/www/html/
