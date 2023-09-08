@@ -1,6 +1,6 @@
 <?php
 $routes = [
-  '/' => 'UserController@profile',
+  '/' => 'HomeController@index',
   '/user/register' => 'UserController@register',
   '/user/create' => 'UserController@create',
   // '/user/edit-profile' => 'UserController@editProfile',
