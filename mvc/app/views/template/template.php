@@ -31,7 +31,7 @@ class Template{
       $this->html .= '<script src="'.$urlBaseJS.$val.'"></script>';
     }
     $this->html .= '</head>
-    <body>';
+    <body class="sb-nav-fixed">';
   }
   /**
    * Carga los archivos JS del final del archivo
@@ -55,8 +55,8 @@ class Template{
     $this->html .= '<div id="layoutSidenav">'.$content;
   }
   
-  public function pushContent($pathFile, $file){
-    $content = 'No hay archivo';
+  public function pushContent($pathFile='x', $file='index'){
+    $content = '';
     $url = __DIR__.'/../'.$pathFile.'/'.$file.'.php';
     if(file_exists($url)){
       $content = file_get_contents($url);

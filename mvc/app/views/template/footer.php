@@ -3,9 +3,9 @@
     <div class="d-flex align-items-center justify-content-between small">
       <div class="text-muted">Copyright &copy; EMPRESA 2023</div>
       <div>
-        <a href="#">Políticas de privacidad</a>
+        <a href="#">Polticas de privacidad</a>
         &middot;
-        <a href="#">Términos &amp; condiciones</a>
+        <a href="#">Terms &amp; Conditions</a>
       </div>
     </div>
   </div>

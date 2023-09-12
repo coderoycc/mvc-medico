@@ -12,5 +12,8 @@ class UserController
   public function create(){
     include __DIR__ . '/../views/user/create.php';
   }
+  public function index(){
+    include __DIR__ . '/../views/user/index.php';
+  }
 }
 ?>

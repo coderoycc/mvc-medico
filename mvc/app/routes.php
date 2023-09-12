@@ -1,9 +1,10 @@
 <?php
 $routes = [
   '/' => 'HomeController@index',
-  '/user/register' => 'UserController@register',
-  '/user/create' => 'UserController@create',
-  // '/user/edit-profile' => 'UserController@editProfile',
+  '/login' => '',
+  '/register' => '',
+  '/users' => 'UserController@index',
+  '/users/create' => 'UserController@create',
   // Agrega más rutas según tus necesidades
 ];
 
