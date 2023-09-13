@@ -9,7 +9,8 @@ $requestUri = $_SERVER['REQUEST_URI'];
 // Verificar si la URL solicitada existe en las rutas definidas
 if (array_key_exists($requestUri, $routes)) {
   // Obtener el controlador y método desde las rutas
-  list($controllerName, $methodName) = explode('@', $routes[$requestUri]);
+  $listaRuta = explode('@', $routes[$requestUri]);
+  list($controllerName, $methodName) = $listaRuta;
 
   // Incluir el controlador y crear una instancia
   require_once __DIR__ . '/app/controllers/' . $controllerName . '.php';
@@ -17,8 +18,16 @@ if (array_key_exists($requestUri, $routes)) {
 
   // Llamar al método correspondiente
   if (method_exists($controller, $methodName)) {
-    // echo 'Se direcciona a '.$controllerName.'->'.$methodName;
-    $controller->{$methodName}();
+    //Verificamos que existe un parametro
+    $cantidad = count($listaRuta);
+    if($cantidad == 3){
+      $controller->{$methodName}($listaRuta[2]);
+    }elseif($cantidad == 4){
+      $controller->{$methodName}($listaRuta[2], $listaRuta[3]);
+    }else{
+      // echo 'Se direcciona a '.$controllerName.'->'.$methodName;
+      $controller->{$methodName}();
+    }
   } else {
     echo 'Método no encontrado';
   }
