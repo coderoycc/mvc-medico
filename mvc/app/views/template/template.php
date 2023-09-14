@@ -55,11 +55,20 @@ class Template{
     $this->html .= '<div id="layoutSidenav">'.$content;
   }
   
-  public function pushContent($pathFile='x', $file='index'){
+  /**
+   * $pathFile: Directorio padre (users, home)
+   * $file: puede ser el archivo dentro del directorio o una cadena html
+   * $html: indica si el parametro @file es html o un archivo
+   */
+  public function pushContent($pathFile='x', $file='index', $html=false){
     $content = '';
-    $url = __DIR__.'/../'.$pathFile.'/'.$file.'.php';
-    if(file_exists($url)){
-      $content = file_get_contents($url);
+    if(!$html){//El contenido que nos manda no es html (es directorio archivo)
+      $url = __DIR__.'/../'.$pathFile.'/'.$file.'.php';
+      if(file_exists($url)){
+        $content = file_get_contents($url);
+      }
+    }else{// Si encontenido que nos manda es html
+      $content = $file;
     }
     $this->html .= '<div id="layoutSidenav_content">'.$content;
   }
