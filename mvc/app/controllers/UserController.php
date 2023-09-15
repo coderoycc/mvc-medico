@@ -14,12 +14,9 @@ class UserController
   }
 
   public function index(){
-    self::include_view('<h1>HOLA</h1>', true);
+    $content = '';
+    // $html = true;
     include __DIR__ . '/../views/user/index.php';
-  }
-  public static function include_view($datos){
-    list($vista, $html) = $datos;
-    include_once __DIR__.'/../views/user/index.php';
   }
 }
 ?>
