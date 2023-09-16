@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <title>ERROR NOT FOUND</title>
+  <title>ERROR 404</title>
   <link href="../../../public/assets/css/main.css" rel="stylesheet" />
   <script src="../../../public/assets/js/fontawesomeAll.js" crossorigin="anonymous"></script>
 </head>
@@ -19,11 +19,11 @@
           <div class="row justify-content-center">
             <div class="col-lg-6">
               <div class="text-center mt-4">
-                <img class="mb-4 img-error" src="assets/img/error-404-monochrome.svg" />
-                <p class="lead">This requested URL was not found on this server.</p>
+                <img class="mb-4 img-error" src="../../../public/images/404.png" />
+                <p class="lead">Ruta no encontrada o no accesible.</p>
                 <a href="/">
                   <i class="fas fa-arrow-left me-1"></i>
-                  Return to Dashboard
+                  Volver al inicio
                 </a>
               </div>
             </div>
@@ -35,18 +35,13 @@
       <footer class="py-4 bg-light mt-auto">
         <div class="container-fluid px-4">
           <div class="d-flex align-items-center justify-content-between small">
-            <div class="text-muted">Copyright &copy; Your Website 2023</div>
-            <div>
-              <a href="#">Privacy Policy</a>
-              &middot;
-              <a href="#">Terms &amp; Conditions</a>
-            </div>
+            <div class="text-muted"> Derechos reservados &copy; SITIO 2023</div>
           </div>
         </div>
       </footer>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+  <script src="../../../public/assets/js/bootstrap.bundle.min.js">
   </script>
   <script src="../../../public/assets/js/main.js"></script>
 </body>

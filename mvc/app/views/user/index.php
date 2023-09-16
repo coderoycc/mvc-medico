@@ -2,23 +2,23 @@
 // Incluimos permisos para aceder a esta carpeta (USUARIOS)
 // ****
 // Incluimos las librerias necesarias para esta carpeta usuarios
-include_once('./headDependencies.php');
+include_once(__DIR__.'/headDependencies.php');
 
 // Incluimos el header Parametros necesarios
-include_once('../template/header.php');
+include_once(__DIR__.'/../template/header.php');
 
 // Incluimos el sidebar
-include_once('../template/sidebar.php');
+include_once(__DIR__.'/../template/sidebar.php');
 
 // Incluimos el contenido (MAIN) Paramteros requeridos $archivo, $content (demas necesarios de la vista) 
-include_once('./'.$archivo.'.php');
+include_once(__DIR__.'/'.$archivo.'.php');
 
 // incluimos Footer
-include_once('../template/footer.php');
+include_once(__DIR__.'/../template/footer.php');
 
 
 // Incluimos librerias scripts JS al final del html
-include_once('./footerDependencies.php');
+include_once(__DIR__.'/footerDependencies.php');
 
 ?>
 <?php

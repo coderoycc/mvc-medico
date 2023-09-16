@@ -29,8 +29,12 @@ if (array_key_exists($requestUri, $routes)) {
       $controller->{$methodName}();
     }
   } else {
-    echo 'Método no encontrado';
+    require_once __DIR__.'/app/controllers/HomeController.php';
+    $error = new MainController();
+    $error->error404();
   }
 } else {
-  echo 'Ruta no encontrada';
+  require_once __DIR__.'/app/controllers/HomeController.php';
+  $error = new MainController();
+  $error->error404();
 }
